@@ -1,0 +1,708 @@
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Roboto:wght@100;300;400;500&family=Rouge+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&family=Roboto:wght@100;300;400;500;700&display=swap");
+* + * {
+  margin-top: 1.5em;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: url("/assets/wall.jpg");
+  background-size: cover;
+}
+
+main {
+  margin-top: 0;
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-flow: column nowrap;
+  background-color: rgba(227, 248, 255, 0.9);
+  line-height: 1.5em;
+}
+
+.head {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: top;
+  position: relative;
+  background: linear-gradient(45deg, rgba(0, 181, 226, 0.175) 50%, rgba(0, 212, 255, 0) 100%);
+  height: 10em;
+  padding-top: 1rem;
+  width: 100%;
+}
+header::after {
+  content: "";
+  position: absolute;
+  background-position: center;
+  background-repeat: repeat-x;
+  min-height: 4em;
+  width: 100%;
+  z-index: 5;
+  bottom: 0;
+  background-image: url("/assets/web-banner.png");
+  background-size: contain;
+}
+
+.h-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 5rem;
+  width: 100%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  margin-left: 0.5em;
+}
+.brand img {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+.brand h3 {
+  display: none;
+  font-size: 1.2em;
+}
+.brand h3 a {
+  text-decoration: none;
+}
+
+.side-bar {
+  display: flex;
+  flex-flow: row wrap;
+  width: auto;
+  height: auto;
+  align-items: center;
+  margin-right: 0.5em;
+}
+.side-bar * {
+  margin: auto 0;
+}
+.side-bar .email {
+  display: none;
+  font-size: 1.2em;
+  text-decoration: none;
+  padding: 0 0.5rem;
+}
+.side-bar .email i {
+  color: #fff;
+}
+.side-bar .email a {
+  text-decoration: none;
+}
+.side-bar .fa-facebook {
+  color: blue;
+}
+.side-bar .fa-instagram::before {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  /* reset Font Awesome's display:inline-block */
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: initial;
+}
+.side-bar i {
+  font-size: 1.5em;
+  padding: 0 0.5rem;
+}
+.side-bar .mobile-nav-btn {
+  border: none;
+  background: none;
+}
+
+.active__flex {
+  display: flex;
+  position: absolute;
+  top: 10em;
+}
+
+nav {
+  z-index: 10;
+  display: none;
+  height: auto;
+  width: 100%;
+  flex-flow: column nowrap;
+  background-color: rgba(250, 250, 250, 0.8);
+}
+nav::after {
+  display: none;
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -1.4rem;
+  z-index: 10;
+  background: url("/assets/wood-border.jpg");
+  background-size: contain;
+  height: 1.4rem;
+}
+nav .nav-item {
+  text-align: center;
+  justify-self: center;
+  background: inherit;
+  height: auto;
+  width: 100%;
+  padding: 1.2em;
+}
+nav .nav-item:last-child:hover {
+  background-color: rgba(225, 225, 225, 0.45);
+}
+nav .nav-item:hover {
+  background-color: rgba(225, 225, 225, 0.45);
+}
+nav .nav-item a {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  font-size: 2em;
+  width: 100%;
+  height: 60vh;
+  margin-bottom: 2rem;
+}
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  z-index: 4;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 35%, rgba(0, 212, 255, 0) 100%);
+}
+.hero::before {
+  content: "";
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  background: url("/assets/hay.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.text-container {
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  z-index: 5;
+  min-width: 100%;
+  min-height: 100%;
+  align-content: center;
+}
+.text-container .text {
+  margin: auto 0;
+  width: 100%;
+  text-align: center;
+}
+.text-container h1 {
+  font-family: "Roboto-Slab", serif;
+  line-height: 1em;
+  margin: 0 auto;
+  max-width: 20ch;
+  font-size: 1.12em;
+  font-weight: 900;
+  color: #fff;
+}
+.text-container p {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  margin-top: 0.5em;
+  margin-inline: auto;
+  font-size: 0.56em;
+  color: #fff;
+  line-height: 1.5em;
+}
+.text-container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1.2rem;
+  width: 100%;
+  background: url("/assets/wood-border.jpg");
+  background-size: contain;
+  bottom: -1.2rem;
+  box-shadow: 0 10px 10px #000, 0 -2px 5px #000;
+}
+
+.sect-head {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  height: auto;
+  justify-content: center;
+  width: 100%;
+  margin: 1.5em 0;
+}
+.sect-head .head {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-top: 1.5em;
+  line-height: 1.5em;
+}
+.sect-head .head i {
+  margin: 1em 1em 0;
+  font-size: 1.3em;
+}
+.sect-head .head h2 {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.8em;
+  margin-bottom: 0.4em;
+}
+.sect-head .sub-head {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 1.5em;
+}
+.sect-head .sub-head h4 {
+  font-size: 1em;
+}
+
+.carousel {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 12rem;
+  height: 50vh;
+  max-height: 50vh;
+  box-shadow: 0 -2px 5px #000, 0px 2px 10px #000;
+  background: #000;
+}
+.carousel .btn {
+  display: block;
+  position: absolute;
+  border: none;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  margin: auto 0;
+  z-index: 5;
+}
+.carousel .btn i {
+  font-size: 3em;
+  color: #fff;
+}
+.carousel .btn--left {
+  left: 0.5rem;
+}
+.carousel .btn--right {
+  right: 0.5rem;
+}
+.carousel .active {
+  display: block !important;
+}
+.carousel .car-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.carousel .car-slides .slide {
+  display: none;
+  min-height: 12rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.carousel .car-slides .slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin: auto;
+}
+
+.track-container {
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.2);
+  bottom: 0;
+}
+.track-container .track-nav {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: auto;
+}
+.track-container .track-nav .track {
+  align-self: center;
+  margin: 0 1rem;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 1rem;
+  height: 1rem;
+  opacity: 0.5;
+}
+
+.contact-form {
+  text-transform: uppercase;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 20rem;
+  width: 100%;
+  background: url("/assets/wood-2.jpg");
+  background-size: cover;
+}
+.contact-form p {
+  padding-top: 1.5em;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto 1.5em;
+  width: 80%;
+}
+.contact-form form {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 100%;
+  min-height: 20rem;
+}
+.contact-form form .form-btn-container {
+  display: flex;
+  width: auto;
+  height: auto;
+  margin: 1.5em;
+}
+.contact-form form input,
+.contact-form form textarea {
+  text-transform: uppercase;
+  min-height: 2.2em;
+  width: 80%;
+  padding: 0.75em;
+  box-shadow: 4px 4px 2px #000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.contact-form form input::-moz-placeholder, .contact-form form textarea::-moz-placeholder {
+  font-size: 1em;
+  margin: 0 1em;
+}
+.contact-form form input:-ms-input-placeholder, .contact-form form textarea:-ms-input-placeholder {
+  font-size: 1em;
+  margin: 0 1em;
+}
+.contact-form form input::placeholder,
+.contact-form form textarea::placeholder {
+  font-size: 1em;
+  margin: 0 1em;
+}
+.contact-form form input[type=submit], .contact-form form input[type=reset],
+.contact-form form textarea[type=submit],
+.contact-form form textarea[type=reset] {
+  border: none;
+  width: auto;
+  background-color: #fff;
+  min-width: 5em;
+  border-radius: 50vh;
+  line-height: 0;
+  margin: 0 1em;
+}
+.contact-form form textarea {
+  min-height: 10em;
+  height: 20vh;
+  font-weight: 300;
+  font-size: 0.85em;
+  padding: 0.1em;
+}
+
+.blog-list {
+  display: flex;
+  height: auto;
+  flex-flow: column nowrap;
+  overflow: hidden;
+  position: relative;
+  background: url("/assets/wood-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2rem 0 4rem;
+  box-shadow: 0 -2px 5px, 0 2px 5px;
+}
+
+.blog-post {
+  height: auto;
+  margin: auto;
+  text-align: left;
+  position: relative;
+  width: 90%;
+  margin-top: 1rem;
+  background: #fff;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.blog-heading {
+  width: 100%;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+.blog-heading h4 {
+  font-size: 1.5rem;
+  font-family: "Rouge Script";
+}
+.blog-heading p {
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.blog-feat-img {
+  margin-bottom: 1.5rem;
+}
+
+.blog-post-img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  width: 90%;
+  box-shadow: 0px 5px 5px;
+}
+
+.blog-post-excerpt {
+  position: relative;
+  display: block;
+  margin-inline: auto;
+  text-align: center;
+  overflow-y: hidden;
+  margin-top: 1rem;
+  width: 90%;
+  max-height: 10rem;
+}
+
+.blog-post-read-more-btn {
+  display: flex;
+  position: absolute;
+  background-size: contain;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  z-index: 5;
+  height: 0.9em;
+  box-shadow: 0 -2px 20px;
+}
+.blog-post-read-more-btn::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 5rem;
+  bottom: 100%;
+  background: linear-gradient(0deg, rgb(255, 255, 255) 19%, rgba(0, 212, 255, 0) 99%);
+}
+.blog-post-read-more-btn button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin: auto 0;
+  overflow: visible;
+  position: absolute;
+  z-index: 5;
+  font-size: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5em 1em;
+  box-shadow: 0 2px 5px;
+}
+
+.read-all-post {
+  display: block;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  margin-top: 2em;
+  color: #fff;
+  height: auto;
+}
+.read-all-post :visited {
+  color: #fff;
+}
+
+.closing-text {
+  margin-left: auto;
+  text-align: center;
+  margin: 1rem 0;
+  width: 100%;
+  padding: 1em;
+  line-height: 1.5rem;
+}
+
+footer {
+  display: flex;
+  height: auto;
+  background-size: contain;
+  background: url("/assets/wood-2.jpg");
+  background-repeat: no-repeat;
+  min-height: 10rem;
+  width: 100%;
+  box-shadow: 0 -2px 5px;
+}
+footer .foot-container {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  flex-flow: column nowrap;
+  color: #fff;
+  justify-content: space-around;
+}
+footer .foot-container a:visited {
+  color: #fff;
+}
+footer .foot-container .social-icons {
+  display: flex;
+  height: auto;
+  width: 100%;
+  justify-content: space-evenly;
+}
+footer .foot-container .social-icons i {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+@media only screen and (min-width: 992px) {
+  main {
+    min-height: 500px;
+    width: 100%;
+  }
+
+  header {
+    height: 20vh;
+  }
+  header h3 {
+    margin-left: 1.5em;
+    display: block !important;
+    color: #000;
+  }
+
+  .mobile-nav-btn {
+    display: none;
+  }
+
+  .email {
+    display: block !important;
+  }
+
+  nav {
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly !important;
+    position: absolute !important;
+    top: 20%;
+  }
+  nav .nav-item {
+    padding: 1.5em;
+    background: none;
+  }
+  nav::after {
+    display: block;
+  }
+  nav .nav-item {
+    max-width: 10em;
+    text-align: center;
+  }
+  nav .nav-item a {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero {
+    height: 100vh;
+  }
+  .hero h1 {
+    font-size: 2.4em;
+  }
+
+  .carousel {
+    max-height: 100%;
+    height: 75vh;
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+    margin: auto;
+  }
+  .contact-form P {
+    padding-top: 2.5em;
+    padding-bottom: 1.5em;
+    width: 60%;
+    font-size: 1.1em;
+  }
+
+  form {
+    min-width: 0 !important;
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  .blog-list {
+    width: 100%;
+    flex-flow: row wrap;
+  }
+
+  .blog-post {
+    width: 30%;
+  }
+
+  footer {
+    display: flex;
+    min-height: 2em !important;
+    width: 100%;
+    flex-flow: row nowrap;
+    padding: 1em 0;
+  }
+  footer .foot-container {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    flex-flow: row nowrap;
+    justify-content: center !important;
+  }
+  footer .foot-container * {
+    width: auto !important;
+    margin: 0 1em;
+  }
+
+  .sect-head {
+    font-size: 1.2em;
+  }
+  .sect-head .head h2 {
+    font-size: 2.4em;
+    padding: 0 2em;
+    margin-bottom: 0.4em;
+  }
+  .sect-head .head i {
+    font-size: 1.5em;
+  }
+  .sect-head .sub-head h4 {
+    font-size: 1.2em;
+  }
+}/*# sourceMappingURL=main.css.map */

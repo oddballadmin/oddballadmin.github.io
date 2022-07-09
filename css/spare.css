@@ -1,0 +1,333 @@
+:root {
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+  --text-white: (0 0% 100%);
+  --text-primary: (0 0% 0%);
+  --text-light: (0 0% 35%);
+  --fw-thin: 100;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fs-small: 1.3rem;
+  --fs-hero-text: 11.4375rem;
+  --fs-normal: 1.5625rem;
+  --fs-medium: 1.75rem;
+  --fs-large: 3.125rem;
+}
+
+html {
+  background: transparent linear-gradient(200deg, rgba(255, 255, 255, 0.7) 0%, rgb(234, 244, 253) 16%, rgb(235, 244, 253) 33%, rgb(236, 245, 253) 56%) 0% 0% no-repeat padding-box;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-inline: auto;
+  width: 100%;
+}
+
+header {
+  position: relative;
+  display: flex;
+  background: inherit;
+  width: 100%;
+  padding-top: 0.5em;
+  padding-bottom: 2rem;
+}
+header::before {
+  background: url("/assets/web-banner.png");
+  background-repeat: repeat-x;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  background-size: contain;
+  margin-top: 1.5em;
+  content: "";
+  max-width: 100%;
+  width: 100%;
+  height: 4.5rem;
+  bottom: -15%;
+}
+
+.brand {
+  display: flex;
+  height: auto;
+  width: auto;
+  flex: 1;
+  padding: 0 0.5em;
+}
+.brand img {
+  height: auto;
+  width: 3.625em;
+}
+.brand h3 {
+  display: none;
+  align-self: center;
+  margin-left: 0.5em;
+}
+.brand h3 a {
+  text-decoration: none;
+}
+.brand h3 a:visited {
+  color: hsl(0deg, 0%, 0%);
+}
+.brand h3 a:hover {
+  color: hsl(0deg, 0%, 0%);
+}
+
+.side-bar {
+  align-items: center;
+  height: auto;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  gap: 0.5em;
+  min-width: 5em;
+}
+
+.mobile-nav-btn {
+  background: transparent;
+  border: none;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  max-width: 3em;
+  max-height: 3em;
+}
+
+nav {
+  display: none;
+  position: relative;
+  text-transform: uppercase;
+  flex-flow: column nowrap;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  padding-top: 1em;
+}
+nav::before {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  z-index: -1;
+}
+nav::after {
+  content: "";
+  background: url("/assets/web-border.png");
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  bottom: 100%;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.75em 0;
+}
+
+.hero {
+  min-height: 25rem;
+  min-width: 100%;
+  background-color: #000;
+}
+
+.hero-img {
+  background: url("/assets/mulch.jpg") no-repeat;
+  background-size: cover;
+  display: flex;
+  overflow: hidden;
+  font-family: serif;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  font-size: 2.3125em;
+  height: auto;
+  width: 100%;
+  z-index: -2;
+}
+.hero-img::before {
+  overflow: hidden;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  opacity: 0.5;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 70%, rgba(0, 212, 255, 0) 100%);
+}
+.hero-img::after {
+  content: "";
+  background: url("/assets/web-border.png");
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  min-height: 5.5rem;
+  bottom: 0;
+}
+.hero-img .text-container {
+  display: block;
+  width: 100%;
+  padding: 2.5rem 0 4.5rem;
+}
+.hero-img h1 {
+  z-index: 2;
+  font-weight: 700;
+  margin: 0 auto;
+  color: #fff;
+  min-width: 10ch;
+  letter-spacing: 0.15em;
+  font-size: 1.75rem;
+  line-height: 1.5em;
+}
+
+.tagline-head {
+  display: flex;
+  height: auto;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1em;
+  margin: 2em 0;
+}
+.tagline-head h2 {
+  font-size: 1.5625em;
+}
+.tagline-head h4 {
+  font-size: 0.72em;
+}
+
+.t-head-text-head {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  background-color: #000;
+  height: 20rem;
+}
+.carousel .btn {
+  height: auto;
+  width: auto;
+  display: block;
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 1;
+  top: 50%;
+}
+.carousel button i {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 3em;
+}
+
+.btn--right {
+  right: 3%;
+}
+
+.btn--left {
+  left: 3%;
+}
+
+.car-slides {
+  display: flex;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  height: 90%;
+}
+.car-slides::before {
+  content: "";
+  position: absolute;
+  background-color: #00f;
+  background-size: cover;
+  top: -5%;
+  height: 5%;
+  min-width: 100%;
+  left: 0;
+  z-index: 4;
+}
+.car-slides::after {
+  content: "";
+  position: absolute;
+  background-color: #00f;
+  background-size: cover;
+  height: 5%;
+  min-width: 100%;
+  left: 0;
+  z-index: 4;
+  bottom: -5%;
+}
+
+.slide {
+  display: none;
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.slide img {
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.track-container {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 2rem;
+  bottom: 5%;
+}
+
+.track-nav {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.track-nav .track {
+  height: 0.7rem;
+  width: 0.7rem;
+  margin: auto 0.5rem;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+}
+
+.active {
+  display: block;
+}/*# sourceMappingURL=spare.css.map */
