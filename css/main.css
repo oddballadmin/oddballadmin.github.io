@@ -4,12 +4,19 @@
   margin-top: 1.5em;
 }
 
+* a {
+  color: #000;
+}
+*:visited {
+  color: #000;
+}
+
 body {
   min-height: 100vh;
   width: 100%;
   margin: 0;
   padding: 0;
-  background: url("/assets/wall.jpg");
+  background: url("/assets/mulch.jpg");
   background-size: cover;
 }
 
@@ -19,7 +26,7 @@ main {
   height: auto;
   width: 100%;
   flex-flow: column nowrap;
-  background-color: rgba(227, 248, 255, 0.9);
+  background-color: rgba(227, 248, 255, 0.97);
   line-height: 1.5em;
 }
 
@@ -35,7 +42,6 @@ header {
   flex-flow: row nowrap;
   align-items: top;
   position: relative;
-  background: linear-gradient(45deg, rgba(0, 181, 226, 0.175) 50%, rgba(0, 212, 255, 0) 100%);
   height: 10em;
   padding-top: 1rem;
   width: 100%;
@@ -75,6 +81,7 @@ header::after {
 .brand h3 {
   display: none;
   font-size: 1.2em;
+  letter-spacing: 0.2rem;
 }
 .brand h3 a {
   text-decoration: none;
@@ -93,7 +100,7 @@ header::after {
 }
 .side-bar .email {
   display: none;
-  font-size: 1.2em;
+  font-size: 1.4em;
   text-decoration: none;
   padding: 0 0.5rem;
 }
@@ -115,7 +122,7 @@ header::after {
   display: initial;
 }
 .side-bar i {
-  font-size: 1.5em;
+  font-size: 1.7em;
   padding: 0 0.5rem;
 }
 .side-bar .mobile-nav-btn {
@@ -132,7 +139,7 @@ header::after {
 nav {
   z-index: 10;
   display: none;
-  height: auto;
+  height: 60vh;
   width: 100%;
   flex-flow: column nowrap;
   background-color: rgba(250, 250, 250, 0.8);
@@ -163,8 +170,11 @@ nav .nav-item:hover {
   background-color: rgba(225, 225, 225, 0.45);
 }
 nav .nav-item a {
+  font-family: Georgia, "Times New Roman", Times, serif;
   text-transform: uppercase;
   text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
 }
 
 .hero {
@@ -185,7 +195,7 @@ nav .nav-item a {
   width: 100%;
   min-height: 100%;
   z-index: 4;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 35%, rgba(0, 212, 255, 0) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 65%, rgba(0, 212, 255, 0) 100%);
 }
 .hero::before {
   content: "";
@@ -211,8 +221,9 @@ nav .nav-item a {
 }
 .text-container .text {
   margin: auto 0;
-  width: 100%;
+  width: auto;
   text-align: center;
+  padding: 0 0.5em;
 }
 .text-container h1 {
   font-family: "Roboto-Slab", serif;
@@ -264,7 +275,7 @@ nav .nav-item a {
 }
 .sect-head .head i {
   margin: 1em 1em 0;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 .sect-head .head h2 {
   font-family: "Roboto Slab", serif;
@@ -366,6 +377,7 @@ nav .nav-item a {
   width: 100%;
   background: url("/assets/wood-2.jpg");
   background-size: cover;
+  box-shadow: #000 0px 2px 10px, #000 0px -2px 10px;
 }
 .contact-form p {
   padding-top: 1.5em;
@@ -449,7 +461,7 @@ nav .nav-item a {
   margin: auto;
   text-align: left;
   position: relative;
-  width: 90%;
+  width: 100%;
   margin-top: 1rem;
   background: #fff;
   padding: 1rem 0;
@@ -527,14 +539,15 @@ nav .nav-item a {
   font-size: 1em;
   left: 50%;
   transform: translateX(-50%);
-  padding: 0.5em 1em;
-  box-shadow: 0 2px 5px;
+  padding: 1em 1.5em;
+  box-shadow: 0 5px 5px;
 }
 
 .read-all-post {
   display: block;
   text-align: center;
   width: 100%;
+  font-size: 1.2em;
   bottom: 0;
   margin-top: 2em;
   color: #fff;
@@ -544,24 +557,84 @@ nav .nav-item a {
   color: #fff;
 }
 
+.stock-card-container {
+  display: flex;
+  width: 100%;
+  flex-flow: column;
+  min-height: 20em;
+  justify-content: center;
+  text-align: center;
+}
+.stock-card-container .card {
+  display: flex;
+  flex-flow: column nowrap;
+  min-width: 18em;
+  max-width: 30em;
+  width: 90%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  -webkit-clip-path: polygon(50% 100%, 100% 74%, 100% 0, 0 0, 0 74%);
+          clip-path: polygon(50% 100%, 100% 74%, 100% 0, 0 0, 0 74%);
+  margin: 1em auto;
+}
+.stock-card-container .card .card-header {
+  height: auto;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+  background: url("/assets/wood-border.jpg");
+  background-size: contain;
+}
+.stock-card-container .card .card-header h3 {
+  padding: 0.5em 0;
+  color: #fff;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.75em;
+  font-weight: 500;
+  line-height: 1em;
+}
+.stock-card-container .card .breed-type {
+  background: url("/assets/wood-border.jpg");
+  background-size: contain;
+  padding: 0.5em 0;
+  font-size: 1.2em;
+  color: #fff;
+}
+.stock-card-container .card .card-img {
+  position: relative;
+  width: 100%;
+  height: 20em;
+}
+.stock-card-container .card .card-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
 .closing-text {
   margin-left: auto;
   text-align: center;
-  margin: 1rem 0;
-  width: 100%;
+  margin: 3rem auto;
+  width: 80%;
   padding: 1em;
   line-height: 1.5rem;
+  font-size: 1.25em;
 }
 
 footer {
   display: flex;
   height: auto;
   background-size: contain;
-  background: url("/assets/wood-2.jpg");
-  background-repeat: no-repeat;
+  background: url("/assets/wood-border.jpg");
   min-height: 10rem;
   width: 100%;
   box-shadow: 0 -2px 5px;
+}
+footer a {
+  color: #fff;
 }
 footer .foot-container {
   display: flex;
@@ -587,28 +660,40 @@ footer .foot-container .social-icons i {
 }
 
 @media only screen and (min-width: 992px) {
+  .h-items {
+    margin: 2em 0;
+    align-items: center;
+  }
+  .h-items .brand {
+    margin-left: 5em;
+    height: 8em;
+  }
+  .h-items .side-bar {
+    margin-right: 5em;
+  }
   main {
     min-height: 500px;
     width: 100%;
   }
-
   header {
-    height: 20vh;
+    min-height: 20vh;
+    height: auto;
   }
   header h3 {
-    margin-left: 1.5em;
+    margin-left: 1em;
     display: block !important;
     color: #000;
+    font-size: 1.6em !important;
   }
-
+  nav {
+    height: auto;
+  }
   .mobile-nav-btn {
     display: none;
   }
-
   .email {
     display: block !important;
   }
-
   nav {
     background: rgba(255, 255, 255, 0.9);
     display: flex;
@@ -632,20 +717,20 @@ footer .foot-container .social-icons i {
     width: 100%;
     height: 100%;
   }
-
   .hero {
     height: 100vh;
   }
   .hero h1 {
-    font-size: 2.4em;
+    font-size: 3.4em;
   }
-
+  .hero p {
+    font-size: 0.8em;
+  }
   .carousel {
     max-height: 100%;
     height: 75vh;
     width: 100%;
   }
-
   .contact-form {
     width: 100%;
     margin: auto;
@@ -656,22 +741,21 @@ footer .foot-container .social-icons i {
     width: 60%;
     font-size: 1.1em;
   }
-
   form {
     min-width: 0 !important;
-    width: 40%;
+    width: 30%;
     margin: 0 auto;
   }
-
   .blog-list {
     width: 100%;
     flex-flow: row wrap;
   }
-
   .blog-post {
-    width: 30%;
+    width: 25%;
   }
-
+  .blog-post .blog-heading {
+    margin-left: 2em;
+  }
   footer {
     display: flex;
     min-height: 2em !important;
@@ -690,7 +774,6 @@ footer .foot-container .social-icons i {
     width: auto !important;
     margin: 0 1em;
   }
-
   .sect-head {
     font-size: 1.2em;
   }
@@ -704,5 +787,13 @@ footer .foot-container .social-icons i {
   }
   .sect-head .sub-head h4 {
     font-size: 1.2em;
+  }
+  .stock-card-container {
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: center;
+  }
+  .stock-card-container .card {
+    width: 20%;
   }
 }/*# sourceMappingURL=main.css.map */

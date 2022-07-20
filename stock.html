@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<title>Living Hope Acres: Home</title>
+	</head>
+	<body>
+		<main>
+			<header>
+				<div class="h-items">
+					<div class="brand">
+						<img
+							src="./assets/logo.png"
+							alt="living hope acres logo"
+							class="logo"
+						/>
+						<h3><a href="./index.html">Living Hope Acres</a></h3>
+					</div>
+					<div class="side-bar">
+						<div class="email"><a href="#">contact@livinghopeacres.com</a></div>
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+						<i class="fa-brands fa-instagram"></i>
+						<i class="fa-brands fa-facebook"></i>
+						<button
+							class="mobile-nav-btn"
+							onclick="toggleNav();"
+							aria-label="Nav-Menu"
+						>
+							<i class="fa-solid fa-bars"></i>
+						</button>
+					</div>
+				</div>
+			</header>
+			<nav id="main-nav">
+				<div class="nav-item">
+					<a href="index.html" class="nav-link">home</a>
+				</div>
+				<div class="nav-item">
+					<a href="contact.html" class="nav-link">contact</a>
+				</div>
+				<div class="nav-item">
+					<a href="blog.html" class="nav-link">blog</a>
+				</div>
+				<div class="nav-item">
+					<a href="stock.html" class="nav-link">stock</a>
+				</div>
+				<div class="nav-item">
+					<a href="shop.html" class="nav-link">shop</a>
+				</div>
+			</nav>
+
+			<section class="hero">
+				<div class="text-container">
+					<div class="text">
+						<h1>Check Out Our Herd!!</h1>
+						<p>If you want it, we probably have it!</p>
+					</div>
+				</div>
+			</section>
+			<div class="sect-head">
+				<div class="head">
+					<i class="fa-solid fa-award"></i>
+					<h2>Show Quality Stock</h2>
+					<i class="fa-solid fa-trophy"></i>
+				</div>
+				<div class="sub-head">
+					<h4>At a fraction of the price</h4>
+				</div>
+			</div>
+			<div class="stock-card-container">
+				<div class="card" id="card-0">
+					<div class="card-header"><h3>Goats</h3></div>
+					<div class="breed-type"><h4>Goats (Alpine Dairy)</h4></div>
+					<div class="card-img">
+						<img src="/assets/goat-babies-2.jpg" alt="goat" />
+					</div>
+				</div>
+				<div class="card" id="card-0">
+					<div class="card-header"><h3>Birds</h3></div>
+					<div class="breed-type"><h4>Chickens, Ducks, Guinnes</h4></div>
+					<div class="card-img">
+						<img src="/assets/chicken.jpg" alt="goat" />
+					</div>
+				</div>
+				<div class="card" id="card-0">
+					<div class="card-header"><h3>Pigs</h3></div>
+					<div class="breed-type"><h4>Meat</h4></div>
+					<div class="card-img">
+						<img src="/assets/pig.jpg" alt="goat" />
+					</div>
+				</div>
+			</div>
+			<section class="closing-text">
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+					amet ut earum tempore recusandae cupiditate obcaecati. Non adipisci
+					asperiores maiores, officiis nemo ex quas amet nam iure assumenda
+					minima neque veritatis voluptatibus, iusto est reiciendis unde tenetur
+					excepturi? Rem quo ipsam sapiente officiis sed perspiciatis unde
+					itaque ut illum dignissimos!
+				</p>
+			</section>
+			<footer>
+				<section class="foot-container">
+					<h4>Living Hope Acres &copy 2019</h4>
+					<div class="footer-contact">
+						<div class="email">
+							<p><a href="#">contact@livinghopeacres.com</a></p>
+						</div>
+						<div class="instagram"></div>
+						<div class="facebook"></div>
+					</div>
+					<div class="social-icons">
+						<i class="fa-brands fa-instagram"></i>
+						<i class="fa-brands fa-facebook"></i>
+					</div>
+				</section>
+			</footer>
+		</main>
+		<script src="./js/utils.js"></script>
+	</body>
+</html>
